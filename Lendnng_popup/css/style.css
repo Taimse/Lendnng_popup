@@ -548,6 +548,10 @@ padding: 0 0 35px 0;
 }
 .popup__form {
 }
+.popup__body-form{
+   display: flex;
+   flex-direction: column;
+}
 .popup__name {
    width: 380px;
 height: 50px;

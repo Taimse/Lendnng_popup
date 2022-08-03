@@ -115,3 +115,31 @@ const swiper = new Swiper('.swiper', {
    sliderPerView: 8,
    spaceBetween: 20,
  });
+ /*==============================================*/
+ const popupButton = document.querySelector('.popup-buttom');
+ const popuptittle = document.querySelector('.popup__tittle');
+ const popupform = document.querySelector('.popup__body-form');
+ const pageButtom = document.querySelector('.page-buttom');
+ const pageButtom2 = document.querySelector('.page-advertisement__buttom');
+   function eventPopup(){
+   console.log("Ваша заявка отправлена");
+   popuptittle.innerHTML = 'Ваша заявка успешно отправлена';
+   popupform.innerHTML = 'Скоро Вам перезвонит наш менеджер для уточнения деталей и записи на урок!';
+   popupform.style.cssText = `
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 25px;
+   text-align: center;
+   color: #FFFFFF;
+   width: 283px;
+   height: 75px;
+   align-self: center;
+   `;
+   pageButtom.innerHTML = 'Ваша заявка принята'
+   pageButtom2.innerHTML = 'Ваша заявка принята'
+   popupButton.removeEventListener("click",eventPopup);
+   popupButton.remove();
+ };
+ popupButton.addEventListener("click",eventPopup);
